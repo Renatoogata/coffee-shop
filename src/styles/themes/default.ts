@@ -14,4 +14,8 @@ export const defaultTheme = {
   'white-100': '#FAFAFA',
   'white-200': '#F3F2F2',
   'white-300': '#8D8686',
+
+  'text-black-light': '#574F4D',
+  'input-background': '#EDEDED',
+  'input-border': '#E6E5E5',
 } as const

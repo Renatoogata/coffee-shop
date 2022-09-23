@@ -4,6 +4,8 @@ import Icon2 from '../../assets/Icon2.svg'
 import Icon3 from '../../assets/Icon3.svg'
 import Icon4 from '../../assets/Icon4.svg'
 
+import { coffeeList } from '../../../database/coffees'
+
 import {
   BodyContainer,
   IntroductionSection,
@@ -14,6 +16,7 @@ import {
   CoffeeSelectionContainer,
 } from './styles'
 import { CoffeeSelection } from '../../components/CoffeeSelection'
+import { useState } from 'react'
 
 export function Home() {
   return (
@@ -56,7 +59,9 @@ export function Home() {
       </CoffeeTitle>
 
       <CoffeeSelectionContainer>
-        <CoffeeSelection />
+        {coffeeList.map((coffee) => (
+          <CoffeeSelection coffee={coffee} key={coffee.id} />
+        ))}
       </CoffeeSelectionContainer>
     </BodyContainer>
   )

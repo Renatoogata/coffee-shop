@@ -75,9 +75,9 @@ export const Quantity = styled.span`
   margin-bottom: 0.4rem;
 `
 
-export const Cart = styled.span`
+export const Cart = styled.button`
   background-color: ${(props) => props.theme['purple-600']};
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem 0.4rem 0 0.4rem;
   color: white;
   margin-left: 0.5rem;
   border-radius: 0.4rem;

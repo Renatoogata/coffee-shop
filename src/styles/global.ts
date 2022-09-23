@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
     }
 
-    p, span{
+    p, span, input{
         font-family: 'Roboto', sans-serif
     }
 `
