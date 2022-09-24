@@ -1,43 +1,19 @@
+import { Bank, CreditCard, MapPinLine, Money } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
-import { MapPinLine } from 'phosphor-react'
-
-import * as zod from 'zod'
-
 import {
   AdressTitle,
-  BodyContainer,
   FormContainer,
   InputContainer,
   PaymentMethodContainer,
-  PaymentSelectButton,
+  PaymentMethodDiv,
 } from './styles'
-import { coffeeList } from '../../../database/coffees'
 
-interface CartContextData {
-  cart: typeof coffeeList[]
-}
-
-const newCompleteOrderFormSchema = zod.object({
-  CEP: zod.string().regex(/^[0-9]{5}-[0-9]{3}$/),
-  roadName: zod.string().min(5),
-  number: zod.string().min(1).max(5),
-  complement: zod.string().min(20),
-  district: zod.string().min(5),
-  city: zod.string(),
-  estate: zod.string(),
-})
-
-export type NewOrderAdressInfo = zod.infer<typeof newCompleteOrderFormSchema>
-
-export function Chart() {
+export const InputForm = () => {
   const { register, handleSubmit } = useForm()
 
-  function handleCreateNewOrder() {}
-
   return (
-    <BodyContainer>
-      <h2>Complete seu pedido</h2>
-      <FormContainer onSubmit={handleCreateNewOrder}>
+    <>
+      <FormContainer>
         <AdressTitle>
           <MapPinLine size={22} color="#C47F17" />
           <div>
@@ -76,11 +52,20 @@ export function Chart() {
         </AdressTitle>
 
         <PaymentMethodContainer>
-          <PaymentSelectButton>Cartao de Crédito</PaymentSelectButton>
-          <PaymentSelectButton>Cartao de Débito</PaymentSelectButton>
-          <PaymentSelectButton>Dinheiro</PaymentSelectButton>
+          <PaymentMethodDiv>
+            <CreditCard size={20} color="#8047F8" />
+            <span>CARTÃO DE CRÉDITO</span>
+          </PaymentMethodDiv>
+          <PaymentMethodDiv>
+            <Bank size={20} color="#8047F8" />
+            <span>CARTÃO DE DÉBITO</span>
+          </PaymentMethodDiv>
+          <PaymentMethodDiv>
+            <Money size={20} color="#8047F8" />
+            <span>DINHEIRO</span>
+          </PaymentMethodDiv>
         </PaymentMethodContainer>
       </FormContainer>
-    </BodyContainer>
+    </>
   )
 }

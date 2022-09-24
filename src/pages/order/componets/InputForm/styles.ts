@@ -1,21 +1,5 @@
 import styled from 'styled-components'
 
-export const BodyContainer = styled.body`
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  gap: 1rem;
-
-  & h2 {
-    font-size: larger;
-    margin-bottom: 0.8rem;
-  }
-`
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
@@ -75,14 +59,30 @@ export const AdressTitle = styled.form`
     }
   }
 `
-
 export const PaymentMethodContainer = styled.div`
   display: flex;
   align-items: flex-start;
   width: 100%;
   justify-content: space-between;
-  background-color: ${(props) => props.theme['white-200']};
-  padding: 2rem;
+  padding: 0 2rem;
 `
 
-export const PaymentSelectButton = styled.button``
+export const PaymentMethodDiv = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 0.4rem;
+  background-color: ${(props) => props.theme['input-background']};
+  border: 1px solid ${(props) => props.theme['input-border']};
+  padding: 0.8rem;
+
+  &:hover {
+    background: ${(props) => props.theme['yellow-500']};
+    transition: background-color 0.2s;
+  }
+
+  &:focus {
+    background-color: ${(props) => props.theme['yellow-500']};
+  }
+`
