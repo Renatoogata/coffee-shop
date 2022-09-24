@@ -1,18 +1,14 @@
 import styled from 'styled-components'
 
-export const BodyContainer = styled.body`
+export const BodyContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
 
+  height: calc(110vh - 10rem);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
 
-  gap: 1rem;
-
-  & h2 {
-    font-size: larger;
-    margin-bottom: 0.8rem;
-  }
+  gap: 0 2rem;
 `

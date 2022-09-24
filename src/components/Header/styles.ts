@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeaderContainer = styled.body`
+export const HeaderContainer = styled.header`
   padding: 1rem 0 6rem 0;
 `
 

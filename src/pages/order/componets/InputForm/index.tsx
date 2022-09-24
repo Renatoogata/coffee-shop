@@ -2,6 +2,7 @@ import { Bank, CreditCard, MapPinLine, Money } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import {
   AdressTitle,
+  FormBodyContainer,
   FormContainer,
   InputContainer,
   PaymentMethodContainer,
@@ -12,7 +13,8 @@ export const InputForm = () => {
   const { register, handleSubmit } = useForm()
 
   return (
-    <>
+    <FormBodyContainer>
+      <h2>Complete seu pedido</h2>
       <FormContainer>
         <AdressTitle>
           <MapPinLine size={22} color="#C47F17" />
@@ -66,6 +68,6 @@ export const InputForm = () => {
           </PaymentMethodDiv>
         </PaymentMethodContainer>
       </FormContainer>
-    </>
+    </FormBodyContainer>
   )
 }

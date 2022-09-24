@@ -24,7 +24,7 @@ export function Header() {
             <img src={localizationIcon} alt="" />
             <span>Porto Alegre, RS</span>
           </LocalizationButton>
-          <NavLink to="/cart">
+          <NavLink to="/order">
             <CartButton color="primary">
               <img src={cart} alt="" />
             </CartButton>

@@ -3,6 +3,7 @@ import * as zod from 'zod'
 import { BodyContainer } from './styles'
 import { coffeeList } from '../../../database/coffees'
 import { InputForm } from './componets/InputForm'
+import { OrderCart } from './componets/Cart'
 
 interface CartContextData {
   cart: typeof coffeeList[]
@@ -25,9 +26,9 @@ export function handleCreateNewOrder() {}
 export function Order() {
   return (
     <BodyContainer>
-      <h2>Complete seu pedido</h2>
-
       <InputForm />
+
+      <OrderCart />
     </BodyContainer>
   )
 }

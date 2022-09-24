@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const BodyContainer = styled.body`
+export const BodyContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -51,8 +51,8 @@ export const TextInfo = styled.div`
   font-family: 'Roboto';
 `
 
-export const CoffeeTitle = styled.h3`
-  padding: 5rem 0 2rem 0;
+export const CoffeeTitle = styled.h1`
+  padding: 5rem 0 3rem 0;
 `
 export const CoffeeSelectionContainer = styled.section`
   display: grid;

@@ -31,7 +31,6 @@ export const CoffeeSelection = ({ coffee }: FullCoffeeCardProps) => {
     setCart((state) => [...state, coffee])
   }
 
-  console.log(cart)
   function addOne() {
     if (coffeeAmount < 9) {
       setCoffeeAmount((state) => state + 1)

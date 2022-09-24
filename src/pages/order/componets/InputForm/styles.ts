@@ -1,6 +1,15 @@
 import styled from 'styled-components'
 
-export const FormContainer = styled.form`
+export const FormBodyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & h2 {
+    font-size: larger;
+  }
+`
+export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;

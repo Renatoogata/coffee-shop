@@ -54,9 +54,7 @@ export function Home() {
         </div>
       </IntroductionSection>
 
-      <CoffeeTitle>
-        <h2>Nossos cafés</h2>
-      </CoffeeTitle>
+      <CoffeeTitle>Nossos cafés</CoffeeTitle>
 
       <CoffeeSelectionContainer>
         {coffeeList.map((coffee) => (
